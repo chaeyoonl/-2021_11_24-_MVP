@@ -16,12 +16,12 @@ public class MainActivity extends Activity implements MainConstants.View{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mainPresenter = new MainPresenter();
+        mainPresenter = new MainPresenter(this);
         initListener();
     }
     public void initListener() {
-        String inputA = ((EditText)findViewById(R.id.editInputA)).getString().toString();
-        String inputB = ((EditText)findViewById(R.id.editInputB)).getString().toString();
+        String inputA = ((EditText)findViewById(R.id.editInputA)).getText().toString();
+        String inputB = ((EditText)findViewById(R.id.editInputB)).getText().toString();
         findViewById(R.id.btnResult).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
