@@ -1,5 +1,7 @@
 package com.example.mvp_test;
 
+import android.util.Log;
+
 public class MainPresenter implements MainConstants.Presenter{
     MainConstants.View mainView;
     MainModel mainModel;
@@ -12,7 +14,7 @@ public class MainPresenter implements MainConstants.Presenter{
         mainView.showResult(Integer.parseInt(input1) + Integer.parseInt(input2));
     }
     @Override
-    public void saveData(int data) {
+    public void saveData(String data) {
         mainModel.saveData(data);
     }
 }

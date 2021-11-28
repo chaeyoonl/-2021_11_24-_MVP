@@ -20,11 +20,14 @@ public class MainActivity extends Activity implements MainConstants.View{
         initListener();
     }
     public void initListener() {
-        String inputA = ((EditText)findViewById(R.id.editInputA)).getText().toString();
-        String inputB = ((EditText)findViewById(R.id.editInputB)).getText().toString();
+//        String inputA = ((EditText)findViewById(R.id.editInputA)).getText().toString();
+//        String inputB = ((EditText)findViewById(R.id.editInputB)).getText().toString();
+        //"=" 버튼 클릭시
         findViewById(R.id.btnResult).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String inputA = ((EditText)findViewById(R.id.editInputA)).getText().toString();
+                String inputB = ((EditText)findViewById(R.id.editInputB)).getText().toString();
                 mainPresenter.addNums(inputA, inputB);
             }
         });

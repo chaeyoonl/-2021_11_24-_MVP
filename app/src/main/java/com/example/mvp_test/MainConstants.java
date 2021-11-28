@@ -8,6 +8,6 @@ public class MainConstants {
     interface Presenter {
         void addNums(String input1, String input2);   //View에서 입력한 두 수에 대한 덧셈
 
-        void saveData(int data);    //데이터 저장
+        void saveData(String data);    //데이터 저장
     }
 }
